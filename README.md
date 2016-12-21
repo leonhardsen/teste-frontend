@@ -5,7 +5,7 @@ Teste para a [vaga de Desenvolvedor frontend](http://trampos.co/oportunidades/12
 ### Instruções
 - Primeiramente, faça um fork e clone deste projeto, então crie uma branch (pode ser com seu nome mesmo);
 - O uso ou não de qualquer framework, lib ou pré-processador é livre, importando apenas o resultado final da entrega;
-- O arquivo *layout.zip* na raiz do repositório contém o layout (formato PSD) junto da família de fonts utilizadas;
+- O arquivo *layout.zip* na raiz do repositório contém o layout (formato PSD) junto da família de fonts utilizadas.
 
 ### Entrega
 
@@ -18,3 +18,5 @@ Teste para a [vaga de Desenvolvedor frontend](http://trampos.co/oportunidades/12
 - Compreensão das funcionalidades por meio do arquivo PSD recebido;
 - Fidelidade visual e precisão ao arquivo PSD recebido;
 - Cuidado com a experiência do usuário e interação de interface.
+
+[Layout](screenshot.png)
