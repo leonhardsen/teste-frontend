@@ -19,4 +19,4 @@ Teste para a [vaga de Desenvolvedor frontend](http://trampos.co/oportunidades/12
 - Fidelidade visual e precisão ao arquivo PSD recebido;
 - Cuidado com a experiência do usuário e interação de interface.
 
-[Layout](screenshot.png)
+![Layout](screenshot.png)
