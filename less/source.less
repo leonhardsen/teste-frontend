@@ -1,0 +1,580 @@
+@import "default/mixins.less";
+@import "default/reset.less";
+@import "fonts.less";
+@import "fontello.less";
+
+html{
+	width: 100%;
+	height: 100%;
+
+	overflow: auto;
+}
+
+body{
+	width: 100%;
+	height: 100%;	
+
+	font-family: 'Gotham HTF', sans-serif;
+	font-size: 14px;
+
+	background-color: #f6f6f6;
+}
+
+.loading{
+	width: 100%;
+	height: 100%;
+
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0683c+0,ef3d68+100 */
+	background: #f0683c; /* Old browsers */
+	background: -moz-linear-gradient(left,  #f0683c 0%, #ef3d68 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #f0683c 0%,#ef3d68 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #f0683c 0%,#ef3d68 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0683c', endColorstr='#ef3d68',GradientType=1 ); /* IE6-9 */
+
+	z-index: 10;
+}
+
+.preloader{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 0;
+	height: 0;
+
+	overflow: hidden;
+}
+
+.content{
+	.box-sizing;
+
+	width: 100%;
+	max-width: 1720px;
+
+	margin: 0 auto;	
+	padding: 0 20px;
+}
+
+header{
+	padding-top: 60px;
+
+	.logo{
+		float: left;
+
+		width: 296px;
+		height: 111px;
+
+		font-size: 0;
+
+		background-image: url('../img/keepi_logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	nav{
+		float: right;
+
+		ul{
+			margin-top: 20px;
+
+			li{
+				display: inline-block;
+
+				margin: 0 40px;				
+
+				font-size: 1.57em;
+
+				a{
+					display: block;
+
+					padding: 20px 0;
+
+					color: #ffffff;
+
+					transition: all .2s ease-out;
+
+					&:hover{						
+						color: #fee2d9;
+					}
+				}
+
+				&.active{
+					font-weight: bold;
+
+					border-bottom: 2px solid #ffffff;
+				}
+
+				&.button{
+					font-weight: bold;
+
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0683c+0,ef3d68+100 */
+					background: #f0683c; /* Old browsers */
+					background: -moz-linear-gradient(left,  #f0683c 0%, #ef3d68 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(left,  #f0683c 0%,#ef3d68 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to right,  #f0683c 0%,#ef3d68 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0683c', endColorstr='#ef3d68',GradientType=1 ); /* IE6-9 */
+
+					border-radius: 30px;
+
+					box-shadow: 0;
+
+					transition: all .2s ease-in;
+
+					a{
+						padding: 20px 40px;
+					}
+
+					&:hover{						
+						box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+					}
+				}
+			}
+		}
+	}
+
+	.social{
+		float: right;
+
+		ul{
+			margin-top: 20px;
+
+			li{
+				display: inline-block;
+
+				padding: 14px 0;
+
+				font-size: 2.5em;
+
+				a{
+					color: #ffffff;
+
+					transition: all .2s ease-out;
+
+					&:hover{						
+						color: #fee2d9;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-button{
+		position: relative;
+
+		display: none;
+
+		.box-sizing;
+
+		width: 40px;
+		height: 40px;
+
+		margin-top: 30px;
+		padding: 10px 8px;
+
+		float: right;
+
+		background-color: rgba(255, 255, 255, 0.2);
+
+		cursor: pointer;
+
+		z-index: 10;
+
+		.nav-bar{
+			width: 24px;
+			height: 3px;
+
+			margin-bottom: 5px;
+
+			background-color: #ffffff;
+
+			border-radius: 2px;
+
+			transition: transform 300ms ease-in;
+		}
+
+		&.active{
+			.nav-bar{
+				&:nth-child(1){
+				    transform: translate(0px, 8px) rotate(45deg);
+				}
+
+			    &:nth-child(2){
+				    transform: scale(0.01, 1);
+				}
+
+				&:nth-child(3){    
+				    transform: translate(0px, -8px) rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&:after{
+		.clear;
+	}
+}
+
+.inicio{
+	width: 100%;
+	min-height: 100%;	
+
+	text-align: center;
+
+	background-image: url('../img/inicio_bg.jpg');
+	background-size: cover;
+	background-position: center;
+
+	.info{
+		.box-sizing;
+
+		width: 100%;
+		max-width: 1120px;
+
+		margin: 0 auto;	
+		padding: 0 20px;
+		margin-top: 10%;
+
+		h2{
+			margin-bottom: 40px;
+
+			font-size: 3.71em;
+			line-height: 1.2em;
+			font-weight: bold;
+
+			color: #ffffff;
+		}
+
+		p{
+			margin-bottom: 60px;
+
+			font-size: 1.71em;
+			line-height: 1.2em;
+
+			color: #ffffff;
+		}
+
+		.cta{
+			display: inline-block;
+
+			margin-bottom: 50px;
+			padding: 30px 70px;
+
+			font-size: 2.28em;
+
+			color: #ffffff;
+
+			border: 1px solid #ffffff;
+			border-radius: 50px;
+
+			transition: all .2s ease-in;
+
+			&:hover{
+				background-color: #ffffff;
+				color: #ef3e67;
+
+				box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+			}
+		}
+	}	
+}
+
+.vantagens{
+	margin-bottom: 150px;
+	padding-top: 120px;
+
+	h3{
+		padding-bottom: 90px;
+
+		text-align: center;
+
+		font-size: 3.57em;
+
+		color: #545454;
+
+		.pink{
+			color: #ef3e67;
+		}
+
+		.orange{
+			color: #f17146;
+		}
+
+		&:after{
+			display: block;
+
+			content: '';
+
+			width: 130px;
+			height: 2px;
+
+			margin: 0 auto;
+			margin-top: 75px;
+
+			background-color: #545454;
+		}
+	}
+
+	.tabs{
+		width: 100%;
+		max-width: 1180px;
+
+		margin: 0 auto;
+
+		.tab-nav{
+			ul{
+				li{
+					display: inline-block;
+
+					width: 20%;
+
+					padding: 25px 0;
+
+					font-size: 1.28em;
+					text-transform: uppercase;
+
+					text-align: center;
+
+					transition: all .1s ease-in;
+
+					a{
+						color: #2d3047;
+					}
+
+					&.active{
+						font-weight: bold;
+
+						border-bottom: 8px solid #ec5f5d;
+					}
+
+					&.arrow{
+						display: none;
+					}
+				}
+			}
+		}
+
+		.tab-content{
+			position: relative;
+
+			width: 100%;
+			height: 200px;			
+			max-width: 944px;
+
+			margin: 0 auto;
+			padding: 120px 0;
+
+			color: #545454;
+
+			h4{
+				padding-top: 30px;
+				margin-bottom: 45px;
+
+				font-size: 2.28em;
+				font-weight: bold;				
+			}
+
+			p{
+				font-size: 1.71em;
+				line-height: 1.2em;
+			}
+
+			.tab-content-item{
+				.box-sizing;
+
+				position: absolute;
+
+				//display: none;
+
+				width: 100%;
+				height: 0;
+
+				//margin-top: -100px;				
+
+				opacity: 0;
+
+				transition: all .1s ease-in;
+
+				.tab-icon{
+					float: left;
+
+					width: 30%;
+				}
+
+				.tab-text{
+					.box-sizing;
+
+					float: left;
+
+					width: 70%;
+
+					padding-left: 100px;
+					padding-right: 100px;
+				}
+
+				&:after{
+					.clear;
+				}
+			}
+
+			.tab-content-active{
+				//display: block;
+
+				height: auto;
+
+				margin-top: 0;
+
+				opacity: 1;
+			}
+
+			.tab-content-1{
+				.tab-icon{
+					
+					height: 200px;					
+
+					background-image: url('../img/tab_content_icon_1.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+
+			.tab-content-2{
+				.tab-icon{
+					height: 200px;					
+
+					background-image: url('../img/tab_content_icon_2.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+
+			.tab-content-3{
+				.tab-icon{
+					
+					height: 184px;					
+
+					background-image: url('../img/tab_content_icon_3.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+
+			.tab-content-4{
+				.tab-icon{
+					
+					height: 240px;					
+
+					background-image: url('../img/tab_content_icon_4.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+
+			.tab-content-5{
+				.tab-icon{
+					
+					height: 209px;					
+
+					background-image: url('../img/tab_content_icon_5.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+		}
+	}
+}
+
+footer{
+	padding: 60px 0;
+
+	background-color: #2f2f2f;
+
+	.content{
+		width: 100%;
+		max-width: 1180px;
+
+		margin: 0 auto;
+	}
+
+	.logo{
+		float: left;
+
+		width: 185px;
+		height: 71px;
+
+		font-size: 0;
+
+		background-image: url('../img/keepi_logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	nav{
+		float: right;
+
+		ul{
+			margin-top: 20px;
+
+			li{
+				display: inline-block;
+
+				margin: 0 15px;				
+
+				font-size: 1em;
+				text-transform: uppercase;
+
+				a{
+					display: block;
+
+					padding: 10px 0;
+
+					color: #ef3d68;
+				}		
+
+				&.orange{
+					a{
+						color: #f0683c;
+					}
+				}		
+			}
+		}
+	}
+
+	.social{
+		float: right;
+
+		ul{
+			margin-left: 10px;
+			margin-top: 20px;
+
+			li{
+				display: inline-block;
+
+				padding: 5px 0;
+
+				font-size: 1.8em;
+
+				a{
+					color: #ef3d68;
+				}
+			}
+		}
+	}
+
+	&:after{
+		.clear;
+	}
+}
+
+@import "mediaqueries.less";
